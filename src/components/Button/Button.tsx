@@ -19,7 +19,7 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = (props) => {
     text,
     textStyle,
     disabledBgColor,
-    style,
+    style = {},
     children,
     ...pressableProps
   } = props;
