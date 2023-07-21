@@ -28,10 +28,10 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = (props) => {
     <Pressable
       style={({ pressed }) => [
         {
-          width: 250,
+          width: 240,
+          height: 38,
           justifyContent: "center",
           margin: 5,
-          padding: 10,
           borderRadius: 5,
           alignItems: "center",
           opacity: pressed ? 0.5 : 1,
@@ -53,7 +53,12 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = (props) => {
         children
       ) : (
         <Text
-          style={{ color: "#000", fontSize: 13, ...(textStyle as TextStyle) }}
+          style={{
+            color: "#000",
+            fontSize: 12,
+            fontFamily: "Poppins",
+            ...(textStyle as TextStyle),
+          }}
         >
           {text}
         </Text>
