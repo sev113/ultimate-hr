@@ -1,7 +1,9 @@
 import { Button, IconButton } from "components/Button";
 import FormFieldWrapper from "components/Form/FormFieldWrapper";
+import Selector from "components/Selector/Selector";
 import PasswordInput from "components/TextInput/PasswordInput";
 import TextInput from "components/TextInput/TextInput";
+import { CITY } from "data";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
