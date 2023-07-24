@@ -9,6 +9,7 @@ import { useFonts } from "expo-font";
 
 import Main from "screens/Main/Main";
 import ColorPalette from "styles/color";
+import Login from "screens/Login/Login";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -24,7 +25,8 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Main />
+      {/* <Main /> */}
+      <Login />
     </View>
   );
 }

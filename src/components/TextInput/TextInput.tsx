@@ -51,11 +51,12 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   input: {
+    fontFamily: "Poppins",
     backgroundColor: "#fff",
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: ColorPalette.boxBorder,
-    height: 45,
+    borderColor: "#666",
+    height: 40,
     padding: 10,
   },
 });

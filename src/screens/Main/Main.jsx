@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
   },
   login_btn: {
     backgroundColor: ColorPalette.primaryGreen,
-    marginHorizontal: 5,
     borderWidth: 1,
     borderColor: ColorPalette.primaryGreen,
   },
