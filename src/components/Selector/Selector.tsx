@@ -62,12 +62,14 @@ export default function Selector({
   return (
     <View
       style={{
-        padding: 5,
         flex: 1,
+        marginBottom: 5,
         ...(style as ViewStyle),
       }}
     >
-      {label ? <Text style={{ fontSize: 12 }}>{label}</Text> : null}
+      {label ? (
+        <Text style={{ fontSize: 12, marginBottom: 4 }}>{label}</Text>
+      ) : null}
       <Menu
         style={{ maxHeight: HEIGHT * 0.7 }}
         visible={showMenu}
@@ -83,9 +85,10 @@ export default function Selector({
                 {
                   flexDirection: "row",
                   justifyContent: "space-between",
-                  height: 45,
+                  height: 35,
                   alignItems: "center",
                   padding: 10,
+
                   borderWidth: 1,
                   borderRadius: 5,
                   borderColor: ColorPalette.boxBorder,

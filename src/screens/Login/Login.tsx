@@ -15,6 +15,8 @@ const Login = () => {
       <View style={styles.input_wrapper}>
         <TextInput placeholder="Username" />
         <TextInput placeholder="Password" />
+      </View>
+      <View style={styles.btn_wrapper}>
         <Button
           text="Log In"
           textStyle={{ color: "#fff" }}
@@ -35,8 +37,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   input_wrapper: {
-    width: WIDTH * 0.55,
+    width: WIDTH * 0.6,
     marginTop: 20,
+  },
+  btn_wrapper: {
+    width: WIDTH * 0.6,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 5,
   },
   login_btn: {
     backgroundColor: ColorPalette.primaryGreen,

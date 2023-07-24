@@ -30,7 +30,7 @@ export const RootNavigator = () => {
         <Stack.Screen
           name="RegisterScreen"
           component={Register}
-          options={{ title: "Sign Up" }}
+          options={{ title: "Sign Up", headerTitleAlign: "center" }}
         />
         <Stack.Screen
           name="HomeScreen"

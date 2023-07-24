@@ -24,31 +24,31 @@ export default function TextInput(props: TextInputProps) {
     <View style={styles.container}>
       {label ? (
         <View style={{ flexDirection: "row" }}>
-          <Text style={{ fontSize: 12 }}>{label}</Text>
+          <Text style={{ fontSize: 12, fontFamily: "Poppins" }}>{label}</Text>
         </View>
       ) : null}
 
-      <View>
-        <RNTextInput
-          autoCapitalize="none"
-          textAlign="left"
-          style={[
-            styles.input,
-            inputStyle,
-            inputProps?.editable == false
-              ? { backgroundColor: "#f5f5f5", color: "#000" }
-              : null,
-          ]}
-          {...inputProps}
-        />
-      </View>
+      <RNTextInput
+        autoCapitalize="none"
+        textAlign="left"
+        style={[
+          styles.input,
+          inputStyle,
+          inputProps?.editable == false
+            ? { backgroundColor: "#f5f5f5", color: "#000" }
+            : null,
+        ]}
+        {...inputProps}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 5,
+    // margin: 5,
+    // width: "100%",
+    marginBottom: 5,
   },
   input: {
     fontFamily: "Poppins",
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#666",
-    height: 40,
-    padding: 10,
+    height: 35,
+    paddingHorizontal: 10,
   },
 });

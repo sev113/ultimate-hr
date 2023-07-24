@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   btn_wrapper: {
-    width: WIDTH * 0.55,
+    width: WIDTH * 0.6,
     justifyContent: "center",
     alignItems: "center",
     marginTop: 20,
