@@ -28,6 +28,7 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = (props) => {
     <Pressable
       style={({ pressed }) => [
         {
+          width: "100%",
           height: 35,
           justifyContent: "center",
           margin: 5,

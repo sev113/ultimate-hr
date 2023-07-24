@@ -1,12 +1,17 @@
 import { StyleSheet, Text, View, Image, Dimensions } from "react-native";
 import React from "react";
+import { StackScreenProps } from "@react-navigation/stack";
+
+import { IStackRouteParamList } from "models";
 import LogoHeading from "components/Logo/LogoHeading";
 import { Button } from "components/Button";
 import ColorPalette from "styles/color";
+import Login from "screens/Login/Login";
 
 const WIDTH = Dimensions.get("window").width;
+type MainScreenProps = StackScreenProps<IStackRouteParamList>;
 
-const Main = () => {
+const Main = ({ navigation }: MainScreenProps) => {
   return (
     <View style={styles.container}>
       <Image source={require("assets/bg-img.png")} style={styles.bg_img} />
@@ -17,8 +22,17 @@ const Main = () => {
             text="Log In"
             textStyle={{ color: "#fff" }}
             style={styles.login_btn}
+            onPress={() => {
+              navigation.navigate("LoginScreen");
+            }}
           />
-          <Button text="Register" style={styles.register_btn} />
+          <Button
+            text="Register"
+            style={styles.register_btn}
+            onPress={() => {
+              navigation.navigate("RegisterScreen");
+            }}
+          />
         </View>
       </View>
       <View style={styles.container_footer}>
@@ -35,6 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#fff",
   },
   container_body: { justifyContent: "center", alignItems: "center" },
   container_footer: {
@@ -49,6 +64,7 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   btn_wrapper: {
+    width: WIDTH * 0.55,
     justifyContent: "center",
     alignItems: "center",
     marginTop: 20,

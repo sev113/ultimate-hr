@@ -23,16 +23,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   imageStyle: {
-    width: 40,
-    height: 70,
+    width: 35,
+    height: 60,
     margin: 8,
   },
   heading: {
-    fontSize: 18,
+    fontSize: 17,
     fontFamily: "Poppins",
   },
   sub_heading: {
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: "Milonga",
   },
 });

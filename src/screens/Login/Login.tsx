@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Dimensions } from "react-native";
+import { StyleSheet, Text, View, Dimensions, Image } from "react-native";
 import React from "react";
 import LogoHeading from "components/Logo/LogoHeading";
 import TextInput from "components/TextInput/TextInput";
@@ -10,6 +10,7 @@ const WIDTH = Dimensions.get("window").width;
 const Login = () => {
   return (
     <View style={styles.container}>
+      <Image source={require("assets/bg-img.png")} style={styles.bg_img} />
       <LogoHeading />
       <View style={styles.input_wrapper}>
         <TextInput placeholder="Username" />
@@ -31,9 +32,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#fff",
   },
   input_wrapper: {
-    width: WIDTH * 0.6,
+    width: WIDTH * 0.55,
     marginTop: 20,
   },
   login_btn: {
@@ -41,5 +43,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: ColorPalette.primaryGreen,
     marginTop: 15,
+  },
+  bg_img: {
+    width: WIDTH,
+    height: WIDTH * 0.5,
+    position: "absolute",
+    bottom: -10,
+    opacity: 0.5,
   },
 });
