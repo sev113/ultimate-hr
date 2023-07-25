@@ -65,14 +65,11 @@ const styles = StyleSheet.create({
   },
   btn_wrapper: {
     width: WIDTH * 0.6,
-    justifyContent: "center",
-    alignItems: "center",
     marginTop: 20,
   },
   login_btn: {
     backgroundColor: ColorPalette.primaryGreen,
-    borderWidth: 1,
-    borderColor: ColorPalette.primaryGreen,
+    marginBottom: 10,
   },
   register_btn: {
     borderWidth: 1,

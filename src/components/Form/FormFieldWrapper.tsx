@@ -9,7 +9,12 @@ const FormFieldWrapper: React.FC<
   React.PropsWithChildren<FormFieldWrapperProps>
 > = ({ children, style }) => {
   return (
-    <View style={{ flexDirection: "row", ...(style as Object) }}>
+    <View
+      style={{
+        flexDirection: "row",
+        ...(style as Object),
+      }}
+    >
       {children}
     </View>
   );

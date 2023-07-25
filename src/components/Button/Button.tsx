@@ -31,7 +31,6 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = (props) => {
           width: "100%",
           height: 35,
           justifyContent: "center",
-          margin: 5,
           borderRadius: 5,
           alignItems: "center",
           opacity: pressed ? 0.5 : 1,

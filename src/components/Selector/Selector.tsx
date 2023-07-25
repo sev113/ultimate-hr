@@ -30,7 +30,7 @@ interface SelectorProps {
   disabled?: boolean;
   showClearButton?: boolean;
   placeholder?: string;
-  selectedItem?: SelectorItem | null;
+  selectedItem?: SelectorItem;
   style?: StyleProp<ViewStyle>;
   menuItemWrapperStyle?: StyleProp<ViewStyle>;
   menuItemTextStyle?: StyleProp<ViewStyle>;
@@ -62,8 +62,8 @@ export default function Selector({
   return (
     <View
       style={{
-        flex: 1,
         marginBottom: 5,
+        width: "100%",
         ...(style as ViewStyle),
       }}
     >
@@ -123,20 +123,6 @@ export default function Selector({
               </View>
               {/* for icon */}
               <View style={{ flexDirection: "row", alignItems: "center" }}>
-                {selectedItem?.value && showClearButton ? (
-                  <IconButton
-                    style={{ padding: 0, marginRight: 10, marginTop: 3 }}
-                    onPress={() => selectItem(null)}
-                  >
-                    <Image
-                      source={require("../../assets/icons/clear.png")}
-                      style={{
-                        width: 12,
-                        height: 12,
-                      }}
-                    />
-                  </IconButton>
-                ) : null}
                 <Image
                   source={require("../../assets/icons/select.png")}
                   style={{ width: 20, height: 20 }}
@@ -152,7 +138,9 @@ export default function Selector({
                 return (
                   <View key={index} style={menuItemWrapperStyle}>
                     <MenuItem
-                      onPress={() => selectItem(item)}
+                      onPress={() => {
+                        selectItem(item);
+                      }}
                       textStyle={{
                         fontSize: 14,
                         color: item.color ? item.color : "#000",

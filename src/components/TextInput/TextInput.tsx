@@ -14,14 +14,22 @@ import Text from "components/Text/Text";
 interface TextInputProps extends RNTextInputProps {
   label?: string;
   inputStyle?: StyleProp<TextStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
   style?: StyleProp<ViewStyle>;
   optional?: boolean;
 }
 
 export default function TextInput(props: TextInputProps) {
-  const { label, inputStyle, style, optional = false, ...inputProps } = props;
+  const {
+    label,
+    inputStyle,
+    style,
+    optional = false,
+    containerStyle,
+    ...inputProps
+  } = props;
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       {label ? (
         <View style={{ flexDirection: "row" }}>
           <Text style={{ fontSize: 12, fontFamily: "Poppins" }}>{label}</Text>
@@ -46,9 +54,8 @@ export default function TextInput(props: TextInputProps) {
 
 const styles = StyleSheet.create({
   container: {
-    // margin: 5,
-    // width: "100%",
     marginBottom: 5,
+    width: "100%",
   },
   input: {
     fontFamily: "Poppins",

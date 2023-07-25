@@ -15,8 +15,9 @@ export default function Text(props: TextProps) {
   return (
     <RNText
       style={{
+        fontFamily: "Poppins",
         color: "#000",
-        fontSize: 14,
+        fontSize: 12,
         ...(style as Object),
       }}
       {...textProps}
